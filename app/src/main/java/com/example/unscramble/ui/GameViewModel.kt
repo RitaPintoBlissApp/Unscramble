@@ -44,6 +44,7 @@ class GameViewModel : ViewModel() {
     private var usedWords: MutableSet<String> = mutableSetOf()
     private lateinit var currentWord: String
 
+
     init {
         resetGame()
     }
@@ -67,6 +68,8 @@ class GameViewModel : ViewModel() {
      * Checks if the user's guess is correct.
      * Increases the score accordingly.
      */
+
+    /*Use the copy() function to copy an object, allowing you to alter some of its properties while keeping the rest unchanged.*/
     fun checkUserGuess() {
         if (userGuess.equals(currentWord, ignoreCase = true)) {
             // User's guess is correct, increase the score
